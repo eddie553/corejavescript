@@ -1,14 +1,14 @@
-console.log(sum(3, 4));
+console.log(sum(3, 4)); // Uncaught Type Error: sum is not a function
 
-function sum(x, y) {
+var sum = function (x, y) {
   return x + y;
-}
+};
 
 var a = sum(1, 2);
 
-function sum(x, y) {
+var sum = function (x, y) {
   return x + " + " + y + " = " + (x + y);
-}
+};
 
 var c = sum(1, 2);
 console.log(c);
