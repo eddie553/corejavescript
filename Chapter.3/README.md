@@ -193,3 +193,8 @@ bind 메서드를 사용하여 새로 만든 함수는 name 프로퍼티에 boun
 1. 변수를 활용한 우회법 (예제 3-10)
 2. call / apply (예제 3-27)
 3. bind (예제 3-27)
+
+### ex. 3-28
+
+[bind 메서드로 내부함수에 this 전달]
+logThis함수에 bind로 this 값을 전달해줌.

@@ -1,10 +1,13 @@
 var obj = {
-  outer: function () {
+  logThis: function () {
     console.log(this);
-    var innerFunc = function () {
-      console.log(this);
-    }.bind(this);
-    innerFunc();
+  },
+  logThisLater1: function () {
+    setTimeout(this.logThis, 500);
+  },
+  logThisLater2: function () {
+    setTimeout(this.logThis.bind(this), 1000);
   },
 };
-obj.outer();
+obj.logThisLater1(); // Window { ... }
+obj.logThisLater2(); // obj { logThis: f, ... }
