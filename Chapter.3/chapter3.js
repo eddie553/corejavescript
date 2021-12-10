@@ -1,14 +1,13 @@
-setTimeout(function () {
-  console.log(this);
-}, 300); // (1)
+var Cat = function (name, age) {
+  this.bark = "야옹";
+  this.name = name;
+  this.age = age;
+};
+var choco = new Cat("초코", 7);
+var nabi = new Cat("나비", 5);
+console.log(choco, nabi);
 
-[1, 2, 3, 4, 5].forEach(function (x) {
-  // (2)
-  console.log(this, x);
-});
-
-document.body.innerHTML += '<button id="a">클릭</button>';
-document.body.querySelector("#a").addEventListener("click", function (e) {
-  // (3)
-  console.log(this, e);
-});
+/* 결과
+  Cat { bark: '야옹', name: '초코', age: 7 }
+  Cat { bark: '야옹', name: '나비', age: 5 }
+  */
