@@ -1,15 +1,16 @@
-var obj1 = {
+var obj = {
   outer: function () {
-    console.log(this); // (1)
-    var innerFunc = function () {
-      console.log(this); // (2) (3)
+    console.log(this); // (1) { outer: f }
+    var innerFunc1 = function () {
+      console.log(this); // (2) Window { ... }
     };
-    innerFunc();
+    innerFunc1();
 
-    var obj2 = {
-      innerMethod: innerFunc,
+    var self = this;
+    var innerFunc2 = function () {
+      console.log(self); // (3) { outer: f }
     };
-    obj2.innerMethod();
+    innerFunc2();
   },
 };
-obj1.outer();
+obj.outer();
