@@ -1,16 +1,10 @@
 var obj1 = {
   name: "obj1",
   func: function () {
-    console.log(obj1.name);
+    console.log(this.name);
   },
 };
-var obj2 = {
-  name: "obj2",
-  func: obj1.func,
-};
-var callback2 = obj2.func();
-setTimeout(callback2, 1500);
+setTimeout(obj1.func.bind(obj1), 1000);
 
-var obj3 = { name: "obj3" };
-var callback3 = obj1.func.call(obj3);
-setTimeout(callback3, 2000);
+var obj2 = { name: "obj2" };
+setTimeout(obj1.func.bind(obj2), 1500);
