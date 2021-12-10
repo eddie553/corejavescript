@@ -165,3 +165,8 @@ Employee서 apply메서드로 Person의 this를 Employee의 this로 가르키도
 
 apply를 활용한다.
 apply의 첫 번째 인자로 null 사용의 이유는 this를 사용하지 않았기 때문.
+
+### ex. 3-24
+
+[여러 인수를 묶어 하나의 배열로 전달하고 싶을 때- ES6의 펼치기 연산자 활용]
+예제 3-23은 apply없이 ... 펼치기 연산자를 활용할 수도 있다.
