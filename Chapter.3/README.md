@@ -153,3 +153,8 @@ ES6의 Array.from 메서드로 모든 종류의 데이터 타입을 배열로 �
 
 Student에서 call메서드로 Person의 this를 Student의 this로 가르키도록 지정,
 Employee서 apply메서드로 Person의 this를 Employee의 this로 가르키도록 지정.
+
+### ex. 3-22
+
+[ call/apply 메서드 활용하지 않았을 때 최대/최소 구하는 코드]
+배열의 요소들을 다 비교하기 위해 forEach를 사용했고, 길고 가독성이 좋지 않음.

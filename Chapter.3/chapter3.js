@@ -1,14 +1,11 @@
-function Person(name, gender) {
-  this.name = name;
-  this.gender = gender;
-}
-function Student(name, gender, school) {
-  Person.call(this, name, gender);
-  this.school = school;
-}
-function Employee(name, gender, company) {
-  Person.apply(this, [name, gender]);
-  this.company = company;
-}
-var by = new Student("보영", "female", "단국대");
-var jn = new Employee("재난", "male", "구골");
+var numbers = [10, 20, 3, 16, 45];
+var max = (min = numbers[0]);
+numbers.forEach(function (number) {
+  if (number > max) {
+    max = number;
+  }
+  if (number < min) {
+    min = number;
+  }
+});
+console.log(max, min); // 45 3
