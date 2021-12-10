@@ -8,3 +8,11 @@
 
 setInterval의 인자로 콜백 함수를 넣어줌.
 300ms 마다 콜백 함수가 반복적으로 실행된다.
+
+### ex. 4-2
+
+[콜백 함수]
+
+예제 4-1의 콜백 함수를 cbFunc에 할당하여 setInterval의 인자로 넘겨줌.
+timer 변수에는 setInterval의 ID 값이 담긴다.
+cbFunc의 제어권은 호출 주체인 setInterval에게 있다.
