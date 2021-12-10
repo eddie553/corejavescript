@@ -106,3 +106,7 @@ inner 컨텍스트가 실행될 때 식별자를 찾기 위해 inner LexicalEnvi
 식별자가 없다면 outer 컨텍스트의 LexicalEnvironment를 참조하여 값을 찾는다.
 즉, outerEnvironmentReference는 현재 호출된 함수가 선언될 당시의 LexicalEnvironment를 참조한다.
 동일한 식별자를 선언한 경우에는 무조건 스코프 체인 상에서 가장 먼저 발견된 식별자에만 접근 가능하다.
+
+### ex. 2-14~16
+
+크롬 전용 - 스코프 체인 확인

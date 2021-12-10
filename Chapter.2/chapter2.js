@@ -1,11 +1,9 @@
 var a = 1;
 var outer = function () {
+  var b = 2;
   var inner = function () {
-    console.log(a);
-    var a = 3;
+    console.dir(inner);
   };
   inner();
-  console.log(a);
 };
 outer();
-console.log(a);
