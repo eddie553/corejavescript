@@ -155,3 +155,13 @@ JSON 문법으로 문자열로 전환했다가 다시 JSON객체로 바꾸는 �
 
 undefined를 요소로 갖는 배열은 값이 없는 것이 아닌 존재 요소로 취급하여 array 메서드의 반복문을 수행한다.
 반면 빈 요소는 배열 반복문을 수행하지 않는다.
+
+### ex. 1-22
+
+[undefined와 null의 비교]
+
+undefined는 자바스크립트 엔진이 반환한느 경우에만 사용하도록 하고,
+사용자가 값을 없음을 명시할 때는 null을 사용하도록 한다.
+null의 typeof는 object이므로 유의한다.
+( null == undefined ) = true
+( null === undefined ) = false
