@@ -165,3 +165,29 @@ undefined는 자바스크립트 엔진이 반환한느 경우에만 사용하도
 null의 typeof는 object이므로 유의한다.
 ( null == undefined ) = true
 ( null === undefined ) = false
+
+### 할당 법칙
+
+identifer (식별자, 변수) = data (데이터);
+
+### identifer의 종류
+
+- identifer
+  - constant (성질 : unchangable )
+  - variable (성질 : changable )
+
+### data의 type
+
+- data
+  - Primitive type (성질 : immutable )
+    - Number
+    - String
+    - Boolean
+    - null
+    - undefiened
+    - Symbol
+  - Reference type (성질 : mutable )
+    - Object-Array
+    - Function
+    - Date
+    - etc...
