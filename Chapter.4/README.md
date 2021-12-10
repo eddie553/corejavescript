@@ -39,3 +39,13 @@ map메서드의 인자로 콜백함수를 넘겨줌.
 
 [콜백 함수 예제 - Array.prototype.map 구현]
 map 메서드의 구성을 이해하기 위한 예제.
+
+### ex. 4-6
+
+[콜백 함수 내부에서의 this]
+
+첫 번째, 두 번째 결과는 전역 객체 결과.
+
+- 세 번째 결과  
+  call 메서드의 첫 번째 인자에 addEventListener메서드의 this를 그대로 넘기도록 정의되어있음.
+  콜백 함수 내부에서의 this가 addEventListener를 호출한 주체인 HTML엘리먼트를 가르킴.
