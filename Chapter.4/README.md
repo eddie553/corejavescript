@@ -27,3 +27,10 @@ map메서드의 인자로 콜백함수를 넘겨줌.
 - map
   Array.prototype.map(callback[, thisArg])
   callback: function(currentValue, index, array)
+
+### ex. 4-4
+
+[콜백 함수 - Array.prototype.map]
+
+인자의 순서를 임의대로 바꾸어 사용한 예제.
+인자의 순서를 임의로 바꾸면 안된다. 정해진 manual대로 인자 순서를 유의하자.
