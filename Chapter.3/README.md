@@ -138,3 +138,9 @@ arguments와 Node 선택자로 선택한 NodeList도 유사배열객체로 배�
 
 map 메서드로 newArr에 새로운 배열을 할당해주었다.
 reduce메서드로 newStr에 새로운 문자열을 할당해주었다.
+
+### ex. 3-20
+
+[Array.from 메서드]
+
+ES6의 Array.from 메서드로 모든 종류의 데이터 타입을 배열로 전환할 수 있다.
