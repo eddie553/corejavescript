@@ -1,24 +1,11 @@
-var copyObjectViaJSON = function (target) {
-  return JSON.parse(JSON.stringify(target));
-};
-var obj = {
-  a: 1,
-  b: {
-    c: null,
-    d: [1, 2],
-    func1: function () {
-      console.log(3);
-    },
-  },
-  func2: function () {
-    console.log(4);
-  },
-};
-var obj2 = copyObjectViaJSON(obj);
+var a;
+console.log(a); // (1) undefined. 값을 대입하지 않은 변수에 접근
 
-obj2.a = 3;
-obj2.b.c = 4;
-obj.b.d[1] = 3;
+var obj = { a: 1 };
+console.log(obj.a); // 1
+console.log(obj.b); // (2) 존재하지 않는 프로퍼티에 접근
+console.log(b); // c.f) ReferenceError: b is not defined
 
-console.log(obj); // { a: 1. b: { c: null, d: [1, 3], func1: f() }, func2: f() }
-console.log(obj2); // { a: 3. b: { c: 4,    d: [1, 2] } }
+var func = function () {};
+var c = func(); // (3) 반환(return)값이 없으면 undefined를 반환한 것으로 간주.
+console.log(c); // undefined
