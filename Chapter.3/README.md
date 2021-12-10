@@ -158,3 +158,10 @@ Employee서 apply메서드로 Person의 this를 Employee의 this로 가르키도
 
 [ call/apply 메서드 활용하지 않았을 때 최대/최소 구하는 코드]
 배열의 요소들을 다 비교하기 위해 forEach를 사용했고, 길고 가독성이 좋지 않음.
+
+### ex. 3-23
+
+[ call/apply 메서드 활용 : 여러 인수를 묶어 하나의 배열로 전달하고 싶을 때]
+
+apply를 활용한다.
+apply의 첫 번째 인자로 null 사용의 이유는 this를 사용하지 않았기 때문.
