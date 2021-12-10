@@ -1,13 +1,6 @@
-var Cat = function (name, age) {
-  this.bark = "야옹";
-  this.name = name;
-  this.age = age;
+var func = function (a, b, c) {
+  console.log(this, a, b, c);
 };
-var choco = new Cat("초코", 7);
-var nabi = new Cat("나비", 5);
-console.log(choco, nabi);
 
-/* 결과
-  Cat { bark: '야옹', name: '초코', age: 7 }
-  Cat { bark: '야옹', name: '나비', age: 5 }
-  */
+func(1, 2, 3); // Window{ ... } 1 2 3
+func.call({ x: 1 }, 4, 5, 6); // { x: 1 } 4 5 6
