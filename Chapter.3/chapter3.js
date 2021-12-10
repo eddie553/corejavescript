@@ -1,6 +1,10 @@
-var func = function (a, b, c, d) {
-  console.log(this, a, b, c, d);
+var obj = {
+  outer: function () {
+    console.log(this);
+    var innerFunc = function () {
+      console.log(this);
+    };
+    innerFunc.call(this);
+  },
 };
-var bindFunc = func.bind({ x: 1 }, 4, 5);
-console.log(func.name); // func
-console.log(bindFunc.name); // bound func
+obj.outer();
