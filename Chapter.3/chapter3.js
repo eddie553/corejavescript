@@ -1,8 +1,14 @@
-var obj = {
-  0: "a",
-  1: "b",
-  2: "c",
-  length: 3,
-};
-var arr = Array.from(obj);
-console.log(arr); // ['a', 'b', 'c']
+function Person(name, gender) {
+  this.name = name;
+  this.gender = gender;
+}
+function Student(name, gender, school) {
+  Person.call(this, name, gender);
+  this.school = school;
+}
+function Employee(name, gender, company) {
+  Person.apply(this, [name, gender]);
+  this.company = company;
+}
+var by = new Student("보영", "female", "단국대");
+var jn = new Employee("재난", "male", "구골");

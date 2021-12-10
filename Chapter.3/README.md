@@ -144,3 +144,12 @@ reduce메서드로 newStr에 새로운 문자열을 할당해주었다.
 [Array.from 메서드]
 
 ES6의 Array.from 메서드로 모든 종류의 데이터 타입을 배열로 전환할 수 있다.
+
+### ex. 3-21
+
+[ call/apply 메서드 활용 : 생성자 내부에서 다른 생성자를 호출]
+
+다른 생성자와 공통된 내용이 있을 경우 call/ apply를 이용하여 다른 생성자 호출하기로 반복 줄이기.
+
+Student에서 call메서드로 Person의 this를 Student의 this로 가르키도록 지정,
+Employee서 apply메서드로 Person의 this를 Employee의 this로 가르키도록 지정.
