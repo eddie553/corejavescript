@@ -5,3 +5,7 @@
 ### ex. 1-1
 
 자바스크립트에서 변수 a 선언(declaration) 하기
+
+### ex. 1-2
+
+변수 a 선언(declaration)과 할당(assignment)을 한 문장으로 동시에 하기
