@@ -1,6 +1,5 @@
-var obj1 = {
-  a: 1,
-  b: "bbb",
+var obj = {
+  x: 3,
+  arr: [3, 4, 5],
 };
-obj1.a = 2;
-console.log(obj1.a);
+console.log(obj);
