@@ -214,3 +214,22 @@ logThis함수에 bind로 this 값을 전달해줌.
 
 (예제) forEach 메서드
 call메서드에 arguments를 받아와 forEach의 인자로 받은 콜백 함수의 his를 지정해주었다.
+
+### ex. 3-31
+
+[콜백 함수와 함께 thisArg를 인자로 받는 메서드]
+
+Array, Set, Map의 prototype
+
+- forEach
+
+Array의 prototype
+
+- map
+- filter
+- some
+- every
+- find
+- findIndex
+- flatMap
+- from
