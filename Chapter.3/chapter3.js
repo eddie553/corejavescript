@@ -3,8 +3,8 @@ var obj = {
     console.log(this);
     var innerFunc = function () {
       console.log(this);
-    };
-    innerFunc.call(this);
+    }.bind(this);
+    innerFunc();
   },
 };
 obj.outer();
