@@ -122,3 +122,9 @@ ES6의 화살표 함수는 상위 스코프의 this를 그대로 활용한다.
 call/apply 메서드를 이용하여 배열 메서드를 적용시킬 수 있다.
 
 push, slice 메서드의 this를 obj로 바인딩해주었다.
+
+### ex. 3-18
+
+[call/apply 메서드 활용: 유사배열객체에 배열 메서드를 적용 - arguments, NodeList]
+
+arguments와 Node 선택자로 선택한 NodeList도 유사배열객체로 배열 메서드 사용 가능.
