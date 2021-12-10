@@ -1,14 +1,27 @@
-function a() {
-  var argv = Array.prototype.slice.call(arguments);
-  argv.forEach(function (arg) {
-    console.log(arg);
-  });
-}
-a(1, 2, 3);
+var str = "abc def";
 
-document.body.innerHTML = "<div>a</div><div>b</div><div>c</div>";
-var nodeList = document.querySelectorAll("div");
-var nodeArr = Array.prototype.slice.call(nodeList);
-nodeArr.forEach(function (node) {
-  console.log(node);
+Array.prototype.push.call(str, ", pushed string");
+// Error: Cannot assign to read only property 'length' of object [object String]
+
+Array.prototype.concat.call(str, "string"); // [String {"abc def"}, "string"]
+
+Array.prototype.every.call(str, function (char) {
+  return char !== " ";
+}); // false
+
+Array.prototype.some.call(str, function (char) {
+  return char === " ";
+}); // true
+
+var newArr = Array.prototype.map.call(str, function (char) {
+  return char + "!";
 });
+console.log(newArr); // ['a!', 'b!', 'c!', ' !', 'd!', 'e!', 'f!']
+
+var newStr = Array.prototype.reduce.apply(str, [
+  function (string, char, i) {
+    return string + char + i;
+  },
+  "",
+]);
+console.log(newStr); // "a0b1c2 3d4e5f6"

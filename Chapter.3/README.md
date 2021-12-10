@@ -128,3 +128,13 @@ push, slice 메서드의 this를 obj로 바인딩해주었다.
 [call/apply 메서드 활용: 유사배열객체에 배열 메서드를 적용 - arguments, NodeList]
 
 arguments와 Node 선택자로 선택한 NodeList도 유사배열객체로 배열 메서드 사용 가능.
+
+### ex. 3-19
+
+[call/apply 메서드 활용 : 유사배열객체에 배열 메서드를 적용 - 문자열]
+
+문자열은 length 프로퍼티가 읽기 전용이기 때문에 원본 문자열에 변경을 가하는 메서드는 에러가 난다.
+(string= immutable)
+
+map 메서드로 newArr에 새로운 배열을 할당해주었다.
+reduce메서드로 newStr에 새로운 문자열을 할당해주었다.
