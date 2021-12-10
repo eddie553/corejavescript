@@ -1,17 +1,22 @@
-var addCoffee = function (prevName, name) {
-  setTimeout(function () {
-    coffeeMaker.next(prevName ? prevName + ", " + name : name);
-  }, 500);
+var addCoffee = function (name) {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve(name);
+    }, 500);
+  });
 };
-var coffeeGenerator = function* () {
-  var espresso = yield addCoffee("", "에스프레소");
-  console.log(espresso);
-  var americano = yield addCoffee(espresso, "아메리카노");
-  console.log(americano);
-  var mocha = yield addCoffee(americano, "카페모카");
-  console.log(mocha);
-  var latte = yield addCoffee(mocha, "카페라떼");
-  console.log(latte);
+var coffeeMaker = async function () {
+  var coffeeList = "";
+  var _addCoffee = async function (name) {
+    coffeeList += (coffeeList ? "," : "") + (await addCoffee(name));
+  };
+  await _addCoffee("에스프레소");
+  console.log(coffeeList);
+  await _addCoffee("아메리카노");
+  console.log(coffeeList);
+  await _addCoffee("카페모카");
+  console.log(coffeeList);
+  await _addCoffee("카페라떼");
+  console.log(coffeeList);
 };
-var coffeeMaker = coffeeGenerator();
-coffeeMaker.next();
+coffeeMaker();
