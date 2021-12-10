@@ -1,10 +1,35 @@
-var obj1 = {
-  name: "obj1",
-  func: function () {
-    console.log(this.name);
-  },
-};
-setTimeout(obj1.func.bind(obj1), 1000);
+setTimeout(
+  function (name) {
+    var coffeeList = name;
+    console.log(coffeeList);
 
-var obj2 = { name: "obj2" };
-setTimeout(obj1.func.bind(obj2), 1500);
+    setTimeout(
+      function (name) {
+        coffeeList += ", " + name;
+        console.log(coffeeList);
+
+        setTimeout(
+          function (name) {
+            coffeeList += ", " + name;
+            console.log(coffeeList);
+
+            setTimeout(
+              function (name) {
+                coffeeList += ", " + name;
+                console.log(coffeeList);
+              },
+              500,
+              "카페라떼"
+            );
+          },
+          500,
+          "카페모카"
+        );
+      },
+      500,
+      "아메리카노"
+    );
+  },
+  500,
+  "에스프레소"
+);
