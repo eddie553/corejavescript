@@ -110,3 +110,4 @@ inner 컨텍스트가 실행될 때 식별자를 찾기 위해 inner LexicalEnvi
 ### ex. 2-14~16
 
 크롬 전용 - 스코프 체인 확인
+예제 2-16 debugger 구문에서 paused 되어서 확인 가능.
