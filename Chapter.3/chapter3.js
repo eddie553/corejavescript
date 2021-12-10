@@ -1,3 +1,4 @@
-console.log(this); // { process: { title: 'node', version: 'v10.13.0',... } }
-console.log(global); // { process: { title: 'node', version: 'v10.13.0',... } }
-console.log(this === global); // true
+var a = 1;
+console.log(a); // 1
+console.log(window.a); // 1
+console.log(this.a); // 1
