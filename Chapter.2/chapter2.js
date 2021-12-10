@@ -1,10 +1,15 @@
 function a() {
-  var b;
-  var b = function b() {}; // ← 바뀐 부분
+  /* ... */
+} // 함수 선언문. 함수명 a가 곧 변수명.
+a(); // 실행 OK.
 
-  console.log(b); // (1)
-  b = "bbb";
-  console.log(b); // (2)
-  console.log(b); // (3)
-}
-a();
+var b = function () {
+  /* ... */
+}; // (익명) 함수 표현식. 변수명 b가 곧 함수명.
+b(); // 실행 OK.
+
+var c = function d() {
+  /* ... */
+}; // 기명 함수 표현식. 변수명은 c, 함수명은 d.
+c(); // 실행 OK.
+d(); // 에러!
