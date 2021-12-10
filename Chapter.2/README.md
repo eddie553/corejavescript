@@ -96,3 +96,13 @@
 [함수 선언문보다는 함수 표현식이 안전]
 
 함수 표현식은 호이스팅 먼저, identifier에 함수의 할당이 나중에 이루어지기 때문에 오류를 확인할 수 있다.
+
+### ex. 2-13
+
+- 스코프 : identifier(식별자)에 대한 유효 범위
+- 스코프 체인 : 스코프를 안에서부터 바깥으로 차례로 검색해나가는 것
+
+inner 컨텍스트가 실행될 때 식별자를 찾기 위해 inner LexicalEnvironment를 먼저 참조,
+식별자가 없다면 outer 컨텍스트의 LexicalEnvironment를 참조하여 값을 찾는다.
+즉, outerEnvironmentReference는 현재 호출된 함수가 선언될 당시의 LexicalEnvironment를 참조한다.
+동일한 식별자를 선언한 경우에는 무조건 스코프 체인 상에서 가장 먼저 발견된 식별자에만 접근 가능하다.
