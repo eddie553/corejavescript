@@ -1,7 +1,17 @@
 var obj = {
-  method: function (x) {
-    console.log(this, x);
+  methodA: function () {
+    console.log(this);
+  },
+  inner: {
+    methodB: function () {
+      console.log(this);
+    },
   },
 };
-obj.method(1); // { method: f } 1
-obj["method"](2); // { method: f } 2
+obj.methodA(); // { methodA: f, inner: {...} }    ( === obj)
+obj["methodA"](); // { methodA: f, inner: {...} } ( === obj)
+
+obj.inner.methodB(); // { methodB: f }            ( === obj.inner)
+obj.inner["methodB"](); // { methodB: f }         ( === obj.inner)
+obj["inner"].methodB(); // { methodB: f }         ( === obj.inner)
+obj["inner"]["methodB"](); // { methodB: f }      ( === obj.inner)
