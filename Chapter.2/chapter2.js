@@ -1,12 +1,9 @@
-// -------------------------- (1)
-var a = 1;
-function outer() {
-  function inner() {
-    console.log(a); // undefined
-    var a = 3;
-  }
-  inner(); // ------------ (2)
-  console.log(a); // 1
+function a(x) {
+  // 수집 대상 1(매개변수)
+  console.log(x); // (1)
+  var x; // 수집 대상 2(변수 선언)
+  console.log(x); // (2)
+  var x = 2; // 수집 대상 3(변수 선언)
+  console.log(x); // (3)
 }
-outer(); // ---------------- (3)
-console.log(a); // 1
+a(1);

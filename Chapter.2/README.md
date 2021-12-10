@@ -24,3 +24,14 @@
     - outerEnvironmentReference
 
   - ThisBinding
+
+### ex. 2-2
+
+[호이스팅]
+
+자바스크립트 실행 이해하기
+
+1. declaration 찾기 = 호이스팅
+   선언은 function, identifier, 등을 순서대로 수집한다.
+2. expression = 실행
+   할당, 함수 실행 등의 코드를 실행한다.
