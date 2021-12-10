@@ -1,12 +1,11 @@
-var func = function (a, b, c) {
-  console.log(this, a, b, c);
-};
-func.apply({ x: 1 }, [4, 5, 6]); // { x: 1 } 4 5 6
-
 var obj = {
-  a: 1,
-  method: function (x, y) {
-    console.log(this.a, x, y);
-  },
+  0: "a",
+  1: "b",
+  2: "c",
+  length: 3,
 };
-obj.method.apply({ a: 4 }, [5, 6]); // 4 5 6
+Array.prototype.push.call(obj, "d");
+console.log(obj); // { 0: 'a', 1: 'b', 2: 'c', 3: 'd', length: 4 }
+
+var arr = Array.prototype.slice.call(obj);
+console.log(arr); // [ 'a', 'b', 'c', 'd' ]
