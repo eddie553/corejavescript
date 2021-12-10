@@ -1,11 +1,7 @@
 var obj1 = {
   name: "obj1",
   func: function () {
-    var self = this;
-    return function () {
-      console.log(self.name);
-    };
+    console.log(obj1.name);
   },
 };
-var callback = obj1.func();
-setTimeout(callback, 1000);
+setTimeout(obj1.func, 1000);
