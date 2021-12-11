@@ -137,3 +137,12 @@ addPartial 함수는 인자 5개를 미리 적용하고, 추후 추가적으로 
    클로저를 참조하여 string 합치는 메서드
    클로저 : originalPartialArgs, func - 상수로 고정되어 미리 적용할 인자들. [function,'왈왈,']
    restArgs : addPartial 실행 시 인자들 arguments. ['배고파요!']
+
+### ex. 5-16
+
+[부분 적용 함수 - 디바운스]
+
+클로저 : eventName, func, wai, timeoutId
+setTimeout의 인자로 클로저 func를 호출한다.
+우스무브 이벤트가 500ms 안에 다시 발생한다면 초기화되고, 다시 발생하지 않고 500ms가 지나면 인자로 전달한 func가 호출된다.
+결과 : Test Debug with Live Server 텍스트 위에서 마우스휠, 마우스무브 이벤트 발생 시 콘솔에 문구 출력.
