@@ -1,8 +1,9 @@
 var outer = function () {
   var a = 1;
   var inner = function () {
-    console.log(++a);
+    return ++a;
   };
-  inner();
+  return inner();
 };
-outer();
+var outer2 = outer();
+console.log(outer2); // 2
