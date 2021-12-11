@@ -1,14 +1,9 @@
-var Person = function (name) {
-  this._name = name;
+var Constructor = function (name) {
+  this.name = name;
 };
-Person.prototype.getName = function () {
-  return this._name;
-};
+Constructor.prototype.method1 = function () {};
+Constructor.prototype.property1 = "Constructor Prototype Property";
 
-var suzi = new Person("Suzi");
-console.log(suzi.__proto__.getName()); // (1) undefined
-
-suzi.__proto__._name = "SUZI__proto__";
-console.log(suzi.__proto__.getName()); // (2) SUZI__proto__
-
-console.log(suzi.getName()); // (3) Suzi
+var instance = new Constructor("Instance");
+console.dir(Constructor);
+console.dir(instance);
