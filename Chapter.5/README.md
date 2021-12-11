@@ -58,3 +58,10 @@ addEventListener에 넘겨준 콜백 함수는 fruit이라는 외부 변수를 �
 예제 5-6의 공통 함수를 콜백 함수를 외부로 꺼내어 alertFruit에 할당.
 addEventListner는 콜백 함수를 호출할 때 첫 번째 인자에 이벤트 객체를 주입하므로 잘못된 예제.
 결과 : your choice is banana alert창이 바로 나타남 + you choice is [object PointerEvent]
+
+### ex. 5-8
+
+[콜백 함수와 클로저(3)]
+
+예제 5-7를 수정.
+bind 메서드를 이용하여 fruit 인자를 올바르게 넘겨준다. (클로저는 사용하지 않음)
