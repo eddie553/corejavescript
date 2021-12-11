@@ -19,3 +19,8 @@ suzi.**proto**.getName()의 this는 suzi.**proto** 이다.
 
 Constructor 함수의 구조 - 프로퍼티로 prototype을 가지고 있고, 선언해준 method1, property1을 확인할 수 있다.
 생성자 Constructor로 만든 인스턴스의 디렉토리 구조 - **proto** 를 가지고 있으며 Constructor.protype과 동일하다.
+
+### ex. 6-3
+
+prototype 객체 내부에는 constructor 프로퍼티가 존재한다.
+생성자 함수(자기 자신)를 참조한다. (인스턴스로부터 원형을 알 수 있는 수단이 됨)
