@@ -50,3 +50,11 @@ inner 함수를 실행한 결과와 같다.
 [콜백 함수와 클로저(1)]
 
 addEventListener에 넘겨준 콜백 함수는 fruit이라는 외부 변수를 참조하는 클로저가 존재.
+
+### ex. 5-7
+
+[콜백 함수와 클로저(2)]
+
+예제 5-6의 공통 함수를 콜백 함수를 외부로 꺼내어 alertFruit에 할당.
+addEventListner는 콜백 함수를 호출할 때 첫 번째 인자에 이벤트 객체를 주입하므로 잘못된 예제.
+결과 : your choice is banana alert창이 바로 나타남 + you choice is [object PointerEvent]
