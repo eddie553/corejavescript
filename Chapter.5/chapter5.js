@@ -1,10 +1,11 @@
-// (2) eventListener
-(function () {
-  var count = 0;
-  var button = document.createElement("button");
-  button.innerText = "click";
-  button.addEventListener("click", function () {
-    console.log(++count, "times clicked");
-  });
-  document.body.appendChild(button);
+// (1) return에 의한 클로저의 메모리 해제
+var outer = (function () {
+  var a = 1;
+  var inner = function () {
+    return ++a;
+  };
+  return inner;
 })();
+console.log(outer());
+console.log(outer());
+outer = null; // outer 식별자의 inner 함수 참조를 끊음
