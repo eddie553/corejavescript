@@ -55,6 +55,8 @@ constructor를 변경하더라도, 참조하는 대상이 변경되었을 뿐, �
 
 [메서드 오버라이드]
 
+(프로토타입 체이닝)
+
 - 인스턴스와 prototype가 동일한 이름의 프로퍼티 또는 메서드가 있을 때
   1. 인스턴스가 자신의 프로퍼티 또는 메서드를 가지고 있는지 검색 (iu 안 getName 존재 검색) -> 있으면 실행
   2. 없으면 -> prototype에 정의된 프로퍼티나 메서드를 검색 (Person.prototype 안 getName 존재 검색)
@@ -67,3 +69,13 @@ constructor를 변경하더라도, 참조하는 대상이 변경되었을 뿐, �
 
 (**proto**) 생략 - Array.prototype 안의 push 메서드 사용
 (**proto**)(**proto**) 생략 - prototype의 **proto** 는 object 데이터 타입이므로 Object.prototype을 hasOwnProperty()를 참조할 수 있다.
+
+### ex. 6-8
+
+[메서드 오버라이드와 프로토타입 체이닝]
+
+프로토타입 체인 : **proto** 프로퍼티 내부에 다시 **proto** 프로퍼티가 연쇄적으로 이어진 것
+프로토타입 체이닝 : 프로토타입 체인을 따라가며 검색하는 것
+
+(1) : arr.**proto**.toString() = Array.prototype.toString()
+(2) : arr 안의 메서드 toString()을 실행.
