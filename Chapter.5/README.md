@@ -44,3 +44,9 @@ inner 함수를 실행한 결과와 같다.
 1. return에 의한 클로저의 메모리 해제
 2. setInterval에 의한 클로저의 메모리 해제
 3. eventListener에 의한 클로저의 메모리 해제
+
+### ex. 5-6
+
+[콜백 함수와 클로저(1)]
+
+addEventListener에 넘겨준 콜백 함수는 fruit이라는 외부 변수를 참조하는 클로저가 존재.
