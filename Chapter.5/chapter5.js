@@ -1,11 +1,13 @@
-// (1) return에 의한 클로저의 메모리 해제
-var outer = (function () {
-  var a = 1;
+// (2) setInterval에 의한 클로저의 메모리 해제
+(function () {
+  var a = 0;
+  var intervalId = null;
   var inner = function () {
-    return ++a;
+    if (++a >= 10) {
+      clearInterval(intervalId);
+      inner = null; // inner 식별자의 함수 참조를 끊음
+    }
+    console.log(a);
   };
-  return inner;
+  intervalId = setInterval(inner, 1000);
 })();
-console.log(outer());
-console.log(outer());
-outer = null; // outer 식별자의 inner 함수 참조를 끊음
