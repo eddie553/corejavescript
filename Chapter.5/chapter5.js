@@ -2,7 +2,7 @@ var createCar = function () {
   var fuel = Math.ceil(Math.random() * 10 + 10); // 연료(L)
   var power = Math.ceil(Math.random() * 3 + 2); // 연비(km / L)
   var moved = 0; // 총 이동거리
-  return {
+  var publicMembers = {
     get moved() {
       return moved;
     },
@@ -18,6 +18,8 @@ var createCar = function () {
       console.log(km + "km 이동 (총 " + moved + "km). 남은 연료: " + fuel);
     },
   };
+  Object.freeze(publicMembers);
+  return publicMembers;
 };
 var car = createCar();
 
