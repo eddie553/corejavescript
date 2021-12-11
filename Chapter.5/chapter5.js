@@ -1,21 +1,15 @@
-var debounce = function (eventName, func, wait) {
-  var timeoutId = null;
-  return function (event) {
-    var self = this;
-    console.log(eventName, "event 발생");
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(func.bind(self, event), wait);
+var curry3 = function (func) {
+  return function (a) {
+    return function (b) {
+      return func(a, b);
+    };
   };
 };
 
-var moveHandler = function (e) {
-  console.log("move event 처리");
-};
-var wheelHandler = function (e) {
-  console.log("wheel event 처리");
-};
-document.body.addEventListener("mousemove", debounce("move", moveHandler, 500));
-document.body.addEventListener(
-  "mousewheel",
-  debounce("wheel", wheelHandler, 700)
-);
+var getMaxWith10 = curry3(Math.max)(10);
+console.log(getMaxWith10(8)); // 10
+console.log(getMaxWith10(25)); // 25
+
+var getMinWith10 = curry3(Math.min)(10);
+console.log(getMinWith10(8)); // 8
+console.log(getMinWith10(25)); // 10
