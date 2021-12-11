@@ -1,10 +1,12 @@
-var outer = function () {
-  var a = 1;
+// (1) setInterval/setTimeout
+(function () {
+  var a = 0;
+  var intervalId = null;
   var inner = function () {
-    return ++a;
+    if (++a >= 10) {
+      clearInterval(intervalId);
+    }
+    console.log(a);
   };
-  return inner;
-};
-var outer2 = outer();
-console.log(outer2()); // 2
-console.log(outer2()); // 3
+  intervalId = setInterval(inner, 1000);
+})();
