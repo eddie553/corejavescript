@@ -99,3 +99,12 @@ object, string은 첫 번째 **proto**가 hasOwnProperty(해당 객체 자체의
 
 * Object.create의 인자로 prototype을 지정해줄 수 있다.
   Object.create(null)은 **proto** 가 null 이 된다.
+
+### ex. 6-10
+
+[다중 프로토타입 체인]
+
+유사배열객체(array-like-object)를 call/apply를 쓰지않고 인스턴스에서 배열 메서드를 직접 사용하기.
+(g.**proto**가 배열의 인스턴스를 가르키게 하기)
+
+Grade 생성자 함수의 prototype에 [] 빈 배열을 새로 할당하는 것으로 상위 프로토타입 체인에 의해 배열 메서드를 사용할 수 있게 된다.
