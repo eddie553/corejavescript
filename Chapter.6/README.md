@@ -60,3 +60,10 @@ constructor를 변경하더라도, 참조하는 대상이 변경되었을 뿐, �
   2. 없으면 -> prototype에 정의된 프로퍼티나 메서드를 검색 (Person.prototype 안 getName 존재 검색)
 
 (A) 와의 결과처럼 prototype 안의 메서드를 실행 시 call/apply로 this를 지정해줄 수 있다.
+
+### ex. 6-7
+
+[배열에서 배열 메서드 및 객체 메서드 실행]
+
+(**proto**) 생략 - Array.prototype 안의 push 메서드 사용
+(**proto**)(**proto**) 생략 - prototype의 **proto** 는 object 데이터 타입이므로 Object.prototype을 hasOwnProperty()를 참조할 수 있다.
