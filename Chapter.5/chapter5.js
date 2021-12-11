@@ -1,15 +1,16 @@
-var fruits = ["apple", "banana", "peach"];
-var $ul = document.createElement("ul");
-
-var alertFruitBuilder = function (fruit) {
-  return function () {
-    alert("your choice is " + fruit);
-  };
+var car = {
+  fuel: Math.ceil(Math.random() * 10 + 10), // 연료(L)
+  power: Math.ceil(Math.random() * 3 + 2), // 연비(km/L)
+  moved: 0, // 총 이동거리
+  run: function () {
+    var km = Math.ceil(Math.random() * 6);
+    var wasteFuel = km / this.power;
+    if (this.fuel < wasteFuel) {
+      console.log("이동불가");
+      return;
+    }
+    this.fuel -= wasteFuel;
+    this.moved += km;
+    console.log(km + "km 이동 (총 " + this.moved + "km)");
+  },
 };
-fruits.forEach(function (fruit) {
-  var $li = document.createElement("li");
-  $li.innerText = fruit;
-  $li.addEventListener("click", alertFruitBuilder(fruit));
-  $ul.appendChild($li);
-});
-document.body.appendChild($ul);
