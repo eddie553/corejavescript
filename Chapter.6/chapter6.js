@@ -1,13 +1,19 @@
 var Person = function (name) {
   this.name = name;
 };
-var p1 = new Person("사람1"); // Person { name: "사람1" } true
-var p1Proto = Object.getPrototypeOf(p1);
-var p2 = new Person.prototype.constructor("사람2"); // Person { name: "사람2" } true
-var p3 = new p1Proto.constructor("사람3"); // Person { name: "사람3" } true
-var p4 = new p1.__proto__.constructor("사람4"); // Person { name: "사람4" } true
-var p5 = new p1.constructor("사람5"); // Person { name: "사람5" } true
+Person.prototype.getName = function () {
+  return this.name;
+};
 
-[p1, p2, p3, p4, p5].forEach(function (p) {
-  console.log(p, p instanceof Person);
-});
+var iu = new Person("지금");
+iu.getName = function () {
+  return "바로 " + this.name;
+};
+console.log(iu.getName()); // 바로 지금
+
+console.log(iu.__proto__.getName()); // undefined
+
+Person.prototype.name = "이지금";
+console.log(iu.__proto__.getName()); //이지금
+
+console.log(iu.__proto__.getName.call(iu)); // (A) 지금

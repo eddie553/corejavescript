@@ -50,3 +50,13 @@ constructor를 변경하더라도, 참조하는 대상이 변경되었을 뿐, �
 2. [instance].**proto**
 3. [instance]
 4. Object.getPrototypeOf([instance])
+
+### ex. 6-6
+
+[메서드 오버라이드]
+
+- 인스턴스와 prototype가 동일한 이름의 프로퍼티 또는 메서드가 있을 때
+  1. 인스턴스가 자신의 프로퍼티 또는 메서드를 가지고 있는지 검색 (iu 안 getName 존재 검색) -> 있으면 실행
+  2. 없으면 -> prototype에 정의된 프로퍼티나 메서드를 검색 (Person.prototype 안 getName 존재 검색)
+
+(A) 와의 결과처럼 prototype 안의 메서드를 실행 시 call/apply로 this를 지정해줄 수 있다.
