@@ -22,5 +22,14 @@ Constructor 함수의 구조 - 프로퍼티로 prototype을 가지고 있고, �
 
 ### ex. 6-3
 
+[constructor 프로퍼티]
+
 prototype 객체 내부에는 constructor 프로퍼티가 존재한다.
 생성자 함수(자기 자신)를 참조한다. (인스턴스로부터 원형을 알 수 있는 수단이 됨)
+
+### ex. 6-4
+
+[constructor 프로퍼티 변경하기]
+
+constructor는 기본형 리터럴 변수(number, string, boolean)를 제외하고 값을 바꿀 수 있다.
+constructor를 변경하더라도, 참조하는 대상이 변경되었을 뿐, 이미 만들어진 인스턴스의 원형이 바뀌거나 데이터 타입이 변하지 않는다.(false 결과)
