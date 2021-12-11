@@ -43,3 +43,4 @@ inner 함수를 실행한 결과와 같다.
 
 1. return에 의한 클로저의 메모리 해제
 2. setInterval에 의한 클로저의 메모리 해제
+3. eventListener에 의한 클로저의 메모리 해제
