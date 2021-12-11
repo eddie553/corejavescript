@@ -79,3 +79,23 @@ constructor를 변경하더라도, 참조하는 대상이 변경되었을 뿐, �
 
 (1) : arr.**proto**.toString() = Array.prototype.toString()
 (2) : arr 안의 메서드 toString()을 실행.
+
+### ex. 6-9
+
+[Object.prototype에 추가한 메서드에의 접근]
+
+Object.prototype에 getEntries라는 메서드를 새로 생성해줌.
+getEntries : this의 [key#, value#]를 요소로 가지는 배열로 만들어주는 사용자가 정의한 메서드
+
+datum[1].getEntries() 에서 datum[1]이 this가 된다.
+
+JS에서 모든 **proto** 는 object 객체이므로, 프로토타입 체인의 최상단에 object.prototype.getEntries를 참조하게 된다.
+
+object, string은 첫 번째 **proto**가 hasOwnProperty(해당 객체 자체의 프로퍼티를 가지고 있는지 true/false를 반환하는 메서드)를 가지므로 if문을 실행시켜 원하는 배열이 반환된다.
+
+- object의 인스턴스에만 적용되는 함수를 만드려면?
+  static method를 활용한다. (ex. freeze())
+  즉, Object.prototype.getEnries가 아닌 Object.getEntries로 static 메서드로 정의하자.
+
+* Object.create의 인자로 prototype을 지정해줄 수 있다.
+  Object.create(null)은 **proto** 가 null 이 된다.
