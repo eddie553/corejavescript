@@ -123,3 +123,17 @@ addPartial 함수는 인자 5개를 미리 적용하고, 추후 추가적으로 
    클로저를 참조하여 string 합치는 메서드
    클로저 : originalPartialArgs, func - 상수로 고정되어 미리 적용할 인자들. [function,'왈왈']
    restArgs : addPartial 실행 시 인자들 arguments. ['입니다']
+
+### ex. 5-15
+
+[부분 적용 함수 구현 (2) - 클로저 이용]
+
+1. add 함수
+   '_'인 엘리먼트를 찾아 restArgs의 엘리먼트로 할당하는 함수
+   클로저 : originalPartialArgs, func - 상수로 고정되어 미리 적용할 인자들. [add,1,2,_,4,5*,*,8,9]
+   restArgs : addPartial 실행 시 인자들 arguments. [3,6,7,10]
+
+2. dog.greet 메서드
+   클로저를 참조하여 string 합치는 메서드
+   클로저 : originalPartialArgs, func - 상수로 고정되어 미리 적용할 인자들. [function,'왈왈,']
+   restArgs : addPartial 실행 시 인자들 arguments. ['배고파요!']
