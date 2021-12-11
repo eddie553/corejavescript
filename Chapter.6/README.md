@@ -33,3 +33,20 @@ prototype 객체 내부에는 constructor 프로퍼티가 존재한다.
 
 constructor는 기본형 리터럴 변수(number, string, boolean)를 제외하고 값을 바꿀 수 있다.
 constructor를 변경하더라도, 참조하는 대상이 변경되었을 뿐, 이미 만들어진 인스턴스의 원형이 바뀌거나 데이터 타입이 변하지 않는다.(false 결과)
+
+### ex. 6-5
+
+[다양한 constructor 접근 방법]
+
+1. [Constructor]
+2. [instance].**proto**.constructor
+3. [instance].constructor
+4. Object.getPrototypeOf([instance]).constructor
+5. [Constructor].prototype.constructor
+
+[prototype 객체 접근 방법]
+
+1. [Constructor].prototype
+2. [instance].**proto**
+3. [instance]
+4. Object.getPrototypeOf([instance])
