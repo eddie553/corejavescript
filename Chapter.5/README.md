@@ -107,3 +107,19 @@ alertFuitBuilder 변수가 함수를 반환하도록 수정. (클로저가 존�
 addPartial 함수는 인자 5개를 미리 적용하고, 추후 추가적으로 인자들을 전달하면 모든 인자들을 모아 원래의 함수가 실행된다.
 
 - bind 메서드만으로 구현 - this의 값을 지정, 내부 함수에서 클로저 존재 X
+
+### ex. 5-14
+
+[부분 적용 함수 구현 (1) - 클로저 이용]
+
+1. add 함수
+   클로저 : originalPartialArgs, func - 상수로 고정되어 미리 적용할 인자들. [add,1,2,3,4,5]
+   restArgs : addPartial 실행 시 인자들 arguments. [6,7,8,9,10]
+   (21 line) [add,1,2,3,4,5] array-like 형태로 partial에 전달
+   (07 line return 부분) array-like 연산을 위해 call 메서드를 활용
+   add=func로 전달, [1,2,3,4,5]=partialArgs로 연산됨.
+
+2. dog.greet 메서드
+   클로저를 참조하여 string 합치는 메서드
+   클로저 : originalPartialArgs, func - 상수로 고정되어 미리 적용할 인자들. [function,'왈왈']
+   restArgs : addPartial 실행 시 인자들 arguments. ['입니다']
