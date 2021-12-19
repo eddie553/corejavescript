@@ -1,16 +1,16 @@
-var extendClass1 = function (SuperClass, SubClass, subMethods) {
-  SubClass.prototype = new SuperClass();
-  for (var prop in SubClass.prototype) {
-    if (SubClass.prototype.hasOwnProperty(prop)) {
-      delete SubClass.prototype[prop];
+var extendClass2 = (function () {
+  var Bridge = function () {};
+  return function (SuperClass, SubClass, subMethods) {
+    Bridge.prototype = SuperClass.prototype;
+    SubClass.prototype = new Bridge();
+    SubClass.prototype.consturctor = SubClass;
+    Bridge.prototype.constructor = SuperClass;
+    if (subMethods) {
+      for (var method in subMethods) {
+        SubClass.prototype[method] = subMethods[method];
+      }
     }
-  }
-  SubClass.prototype.consturctor = SubClass;
-  if (subMethods) {
-    for (var method in subMethods) {
-      SubClass.prototype[method] = subMethods[method];
-    }
-  }
-  Object.freeze(SubClass.prototype);
-  return SubClass;
-};
+    Object.freeze(SubClass.prototype);
+    return SubClass;
+  };
+})();
