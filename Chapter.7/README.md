@@ -41,3 +41,25 @@ Array의 push 메서드는 배열의 length를 검사한 후, 마지막 요소�
 
 7-3와 마찬가지로 불완전한 클래스 구현
 .prototype(클래스)에 구체적인 값이 없으면 해결.
+
+### ex. 7-5
+
+[Recatngle, Square 클래스] - 클래스 구현해보기
+
+- Rectangle
+
+  - .prototype
+    - getArea(){}
+  - constructor
+
+- Square
+
+  - .prototype
+    - getArea(){}
+    - \_\_proto\_\_
+    - constructor
+
+- instance sq
+  - \_\_proto\_\_ -> Square.prototype
+
+Rectangle의 자식 클래스인 Square가 getArea 메서드를 상속받아 쓰려면?
