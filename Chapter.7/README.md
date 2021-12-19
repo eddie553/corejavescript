@@ -137,3 +137,11 @@ constructor를 복구하기 위해서는 자식 클래스.prototype.constuctor �
   - propName이 없을 때, Rectangle 함수를 return(this는 Square의 instance)
   - propName이 함수가 아니면 바로 prop을 return
   - propName이 함수이면 해당 propName('getArea') 함수를 return(this는 Square의 instance)
+
+### ex. 7-15
+
+[ES5와 ES6의 클래스 문법 비교]
+
+- constructor
+  - staticMethod
+  - prototype.method
