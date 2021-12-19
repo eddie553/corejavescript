@@ -122,3 +122,8 @@ constructor를 복구하기 위해서는 자식 클래스.prototype.constuctor �
 
 [클래스 상속 및 추상화 방법 - 완성본(2) - 빈 함수를 활용]
 예제 7-9를 수정하여 constuctor를 복구한 예제.
+
+### ex. 7-13
+
+[ 클래스 상속 및 추상화 방법 - 완성본(3) - Object.create 활용 ]
+예제 7-10을 수정하여 constuctor를 복구한 예제.
