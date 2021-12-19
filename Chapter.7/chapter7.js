@@ -1,3 +1,19 @@
+var extendClass1 = function (SuperClass, SubClass, subMethods) {
+  SubClass.prototype = new SuperClass();
+  for (var prop in SubClass.prototype) {
+    if (SubClass.prototype.hasOwnProperty(prop)) {
+      delete SubClass.prototype[prop];
+    }
+  }
+  if (subMethods) {
+    for (var method in subMethods) {
+      SubClass.prototype[method] = subMethods[method];
+    }
+  }
+  Object.freeze(SubClass.prototype);
+  return SubClass;
+};
+
 var Rectangle = function (width, height) {
   this.width = width;
   this.height = height;
@@ -5,18 +21,8 @@ var Rectangle = function (width, height) {
 Rectangle.prototype.getArea = function () {
   return this.width * this.height;
 };
-var rect = new Rectangle(3, 4);
-console.log(rect.getArea()); // 12
-
-var Square = function (width) {
+var Square = extendClass1(Rectangle, function (width) {
   Rectangle.call(this, width, width);
-};
-Square.prototype = new Rectangle();
-
+});
 var sq = new Square(5);
 console.log(sq.getArea()); // 25
-
-console.dir(sq);
-
-var rect2 = new sq.constructor(2, 3);
-console.log(rect2);

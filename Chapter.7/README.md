@@ -82,3 +82,11 @@ Square 생성자를 실행하면, Square 생성자 함수 내의 Rectangle.call(
 
 1. Square 생성자로 생성한 인스턴스 sq의 constructor는 Square가 아니라 Recatngle이 됨.
 2. Square.prototype으로 구체적인 데이터가 존재.
+
+### ex. 7-8
+
+[ 클래스 상속 및 추상화 방법 (1) - 인스턴스 생성 후 프로퍼티 제거 ]
+
+extendClass1 함수
+인스턴스 생성 후 SubClass의 프로퍼티들을 모두 지우고,
+SubMethods에 들어갈 메서드들이 정의된 객체를 받아 SubClass의 prototype에 정리 후 freeze.
