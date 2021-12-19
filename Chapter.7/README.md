@@ -24,3 +24,13 @@ ES6에서는 클래스 문법을 지원한다.
   - prototype properties, methods
 - new 생성자로 만든 인스턴스
   - \_\_proto\_\_ 로 생성자 prototype에 있는 메서드를 사용 가능하다
+
+### ex. 7-3
+
+[length 프로퍼티를 삭제한 경우] - 불완전한 클래스 구현
+
+delete g.length로 인스턴스의 length 프로퍼티를 강제로 삭제한다.
+Array의 push 메서드는 배열의 length를 검사한 후, 마지막 요소로 배열을 추가한다.
+인스턴스에 length 프로퍼티가 없으므로 인스턴스의 \_\_proto\_\_인 Grade.prototype의 length를 검사하므로
+0번째 요소로 70을 넣고, length 프로퍼티는 여전히 존재하지 않는 배열이 된다.
+출력되는 length는 Grade.prototype(빈배열)의 length이다.
