@@ -63,3 +63,9 @@ Array의 push 메서드는 배열의 length를 검사한 후, 마지막 요소�
   - \_\_proto\_\_ -> Square.prototype
 
 Rectangle의 자식 클래스인 Square가 getArea 메서드를 상속받아 쓰려면?
+
+### ex. 7-6
+
+[Recatngle, Square 클래스] - Square 클래스 변형
+
+Rectangle의 하위 클래스로 삼을 수 있도록 Square 생성자를 수정.
