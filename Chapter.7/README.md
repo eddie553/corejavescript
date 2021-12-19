@@ -127,3 +127,13 @@ constructor를 복구하기 위해서는 자식 클래스.prototype.constuctor �
 
 [ 클래스 상속 및 추상화 방법 - 완성본(3) - Object.create 활용 ]
 예제 7-10을 수정하여 constuctor를 복구한 예제.
+
+### ex. 7-14
+
+[상위 클래스 접근 수단인 super 메서드 추가]
+
+- 자식 클래스가 부모 클래스의 constructor, method 등에 접근하기 위한 super 메서드
+  - this를 할당해준 self는 SubClass의 instance가 된다.
+  - propName이 없을 때, Rectangle 함수를 return(this는 Square의 instance)
+  - propName이 함수가 아니면 바로 prop을 return
+  - propName이 함수이면 해당 propName('getArea') 함수를 return(this는 Square의 instance)
