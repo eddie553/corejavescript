@@ -17,3 +17,6 @@ var sq = new Square(5);
 console.log(sq.getArea()); // 25
 
 console.dir(sq);
+
+var rect2 = new sq.constructor(2, 3);
+console.log(rect2);

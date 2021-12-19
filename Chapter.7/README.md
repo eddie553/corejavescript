@@ -77,3 +77,8 @@ Rectangle의 하위 클래스로 삼을 수 있도록 Square 생성자를 수정
 Square.prototype에 Rectangle의 인스턴스([undefined,undefined])를 부여함.
 Square 생성자를 실행하면, Square 생성자 함수 내의 Rectangle.call(this,width,width)에 의해
 생성된 인스턴스의 \_\_proto\_\_ -> Rectangle.prototype 으로 Rectangle 클래스를 상속할 수 있다.
+
+불완전한 상속 - 문제
+
+1. Square 생성자로 생성한 인스턴스 sq의 constructor는 Square가 아니라 Recatngle이 됨.
+2. Square.prototype으로 구체적인 데이터가 존재.
