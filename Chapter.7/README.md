@@ -69,3 +69,11 @@ Rectangle의 자식 클래스인 Square가 getArea 메서드를 상속받아 쓰
 [Recatngle, Square 클래스] - Square 클래스 변형
 
 Rectangle의 하위 클래스로 삼을 수 있도록 Square 생성자를 수정.
+
+### ex. 7-7
+
+[Recatngle, Square 클래스] - Rectangle을 상속하는 Square 클래스
+
+Square.prototype에 Rectangle의 인스턴스([undefined,undefined])를 부여함.
+Square 생성자를 실행하면, Square 생성자 함수 내의 Rectangle.call(this,width,width)에 의해
+생성된 인스턴스의 \_\_proto\_\_ -> Rectangle.prototype 으로 Rectangle 클래스를 상속할 수 있다.
