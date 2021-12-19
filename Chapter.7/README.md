@@ -90,12 +90,21 @@ Square 생성자를 실행하면, Square 생성자 함수 내의 Rectangle.call(
 extendClass1 함수 :
 인스턴스 생성 후 SubClass의 프로퍼티들을 모두 지우고,
 SubMethods에 들어갈 메서드들이 정의된 객체를 받아 SubClass의 prototype에 정리 후 freeze.
+sq의 \_\_proto\_\_ -> SubClass.prototype(SubMethods)의 \_\_proto\_\_ -> SuperClass.prototype
 
 ### ex. 7-9
 
 [ 클래스 상속 및 추상화 방법 (2) - 빈 함수를 활용(클로저 변수) ]
 
-extendClass1 함수 :
+extendClass2 함수 :
 빈 함수 Bridge 를 생성하여 return하는 함수에서 Bridge 클로저 변수를 사용한다.
 Bridge의 prototype은 Rectangle.prototype을 가르킨다.
 sq 의 \_\_proto\_\_ -> Square.prototype(SubMethods)의 \_\_proto\_\_ -> Bridge.prototype
+
+### ex. 7-10
+
+[ 클래스 상속 및 추상화 방법 (3) - Object.create 활용 ]
+
+Object.create로 생성하는 객체의 \_\_proto\_\_를 Rectangle.prototype을 가르키도록 지정해주고
+Square.prototype에 할당한다.
+sq 의 \_\_proto\_\_ -> Square.prototype(SubMethods)의 \_\_proto\_\_ -> Rectangle.prototype
