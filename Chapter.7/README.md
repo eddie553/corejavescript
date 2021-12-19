@@ -34,3 +34,10 @@ Array의 push 메서드는 배열의 length를 검사한 후, 마지막 요소�
 인스턴스에 length 프로퍼티가 없으므로 인스턴스의 \_\_proto\_\_인 Grade.prototype의 length를 검사하므로
 0번째 요소로 70을 넣고, length 프로퍼티는 여전히 존재하지 않는 배열이 된다.
 출력되는 length는 Grade.prototype(빈배열)의 length이다.
+
+### ex. 7-4
+
+[요소가 있는 배열을 prototype에 매칭한 경우] - 불완전한 클래스 구현
+
+7-3와 마찬가지로 불완전한 클래스 구현
+.prototype(클래스)에 구체적인 값이 없으면 해결.
