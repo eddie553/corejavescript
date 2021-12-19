@@ -108,3 +108,12 @@ sq 의 \_\_proto\_\_ -> Square.prototype(SubMethods)의 \_\_proto\_\_ -> Bridge.
 Object.create로 생성하는 객체의 \_\_proto\_\_를 Rectangle.prototype을 가르키도록 지정해주고
 Square.prototype에 할당한다.
 sq 의 \_\_proto\_\_ -> Square.prototype(SubMethods)의 \_\_proto\_\_ -> Rectangle.prototype
+
+### ex. 7-11
+
+7-8,7-9, 7-10은 모두 클래스가 구체적인 데이터를 지니지 않게 하지만 constructor를 복구하지 않은 상태이다.
+
+constructor를 복구하기 위해서는 자식 클래스.prototype.constuctor 프로퍼티가 자식 클래스를 가르키도록 할당하면 된다.
+
+[클래스 상속 및 추상화 방법 - 완성본(1) - 인스턴스 생성 후 프로퍼티 제거]
+예제 7-8를 수정하여 constuctor를 복구한 예제.

@@ -1,15 +1,16 @@
-var Rectangle = function (width, height) {
-  this.width = width;
-  this.height = height;
+var extendClass1 = function (SuperClass, SubClass, subMethods) {
+  SubClass.prototype = new SuperClass();
+  for (var prop in SubClass.prototype) {
+    if (SubClass.prototype.hasOwnProperty(prop)) {
+      delete SubClass.prototype[prop];
+    }
+  }
+  SubClass.prototype.consturctor = SubClass;
+  if (subMethods) {
+    for (var method in subMethods) {
+      SubClass.prototype[method] = subMethods[method];
+    }
+  }
+  Object.freeze(SubClass.prototype);
+  return SubClass;
 };
-Rectangle.prototype.getArea = function () {
-  return this.width * this.height;
-};
-var Square = function (width) {
-  Rectangle.call(this, width, width);
-};
-Square.prototype = Object.create(Rectangle.prototype);
-Object.freeze(Square.prototype);
-
-var sq = new Square(5);
-console.log(sq.getArea()); // 25
