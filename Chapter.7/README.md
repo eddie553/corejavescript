@@ -145,3 +145,11 @@ constructor를 복구하기 위해서는 자식 클래스.prototype.constuctor �
 - constructor
   - staticMethod
   - prototype.method
+
+### ex. 7-16
+
+[ES6의 클래스 상속]
+
+Rectangle 생성자를 class로 정의,
+Square은 Rectangle 클래스를 상속받는다.
+부모 클래스의 constructor나 메서드를 사용할 때는 super 메서드를 사용한다.

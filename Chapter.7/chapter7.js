@@ -1,27 +1,17 @@
-var ES5 = function (name) {
-  this.name = name;
-};
-ES5.staticMethod = function () {
-  return this.name + " staticMethod";
-};
-ES5.prototype.method = function () {
-  return this.name + " method";
-};
-var es5Instance = new ES5("es5");
-console.log(ES5.staticMethod()); // es5 staticMethod
-console.log(es5Instance.method()); // es5 method
-
-var ES6 = class {
-  constructor(name) {
-    this.name = name;
+var Rectangle = class {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
   }
-  static staticMethod() {
-    return this.name + " staticMethod";
-  }
-  method() {
-    return this.name + " method";
+  getArea() {
+    return this.width * this.height;
   }
 };
-var es6Instance = new ES6("es6");
-console.log(ES6.staticMethod()); // es6 staticMethod
-console.log(es6Instance.method()); // es6 method
+var Square = class extends Rectangle {
+  constructor(width) {
+    super(width, width);
+  }
+  getArea() {
+    console.log("size is :", super.getArea());
+  }
+};
